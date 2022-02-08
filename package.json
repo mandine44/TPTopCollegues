@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base
-    -href=https://github.com/mandine44/TPTopCollegues.git",
+    "build": "ng build --base-href=https://mandine44.github.io/TPTopCollegues.git/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
