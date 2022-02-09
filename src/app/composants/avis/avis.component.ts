@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Avis } from 'src/app/models';
 
 
@@ -8,6 +8,9 @@ import { Avis } from 'src/app/models';
   styleUrls: ['./avis.component.scss']
 })
 export class AvisComponent implements OnInit {
+@Input() AimerActif!:boolean;
+@Input() DetesterActif!:boolean;
+
 @Output() avisEvt=new EventEmitter<Avis>();
   constructor() { }
   ngOnInit(): void {

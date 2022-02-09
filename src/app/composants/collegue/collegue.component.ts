@@ -16,12 +16,20 @@ export class CollegueComponent implements OnInit {
 
   @Input()
   unCollegue!: Collegue;
+  aimerActiver=false;
+  detesterActiver=false;
 
   ngOnInit(): void {
+
   }
+
   traiterAvis(avis:Avis){
     if (avis==Avis.AIMER){this.unCollegue.score+=100;}
     else{this.unCollegue.score-=100;}
+    this.aimerActiver = this.unCollegue.score<1000?false:true;
+    this.detesterActiver= this.unCollegue.score>-1000?false:true;
   }
+
+
 
 }
