@@ -29,6 +29,7 @@ export class CollegueComponent implements OnInit {
     this.aimerActiver = this.unCollegue.score<1000?false:true;
     this.detesterActiver= this.unCollegue.score>-1000?false:true;
   }
+ 
 
 
 

@@ -9,5 +9,5 @@ import { Collegue } from './models';
 })
 export class AppComponent {
   title = 'top-collegues';
-  collegueFictif:Collegue={ photoURL:"une magnifique photo",pseudo:"beber",score:100}
+  collegueFictif:Collegue={ photo:"une magnifique photo",pseudo:"beber",score:100}
 }
