@@ -14,9 +14,9 @@ export class ListeColleguesComponentComponent implements OnInit {
 
   }
   maListe:Collegue[]=[
-    {photoURL:'une magnifique photo',pseudo:'beber',score:100},
-    {photoURL:'une autre tres belle photo',pseudo:'Dédé',score:100},
-    {photoURL:'une photo de ouf',pseudo:'Momo',score:100}]
+    {photoURL:'https://picsum.photos/seed/picsum/200/300',pseudo:'beber',score:100},
+    {photoURL:'https://picsum.photos/seed/picsum/200/300',pseudo:'Dédé',score:100},
+    {photoURL:'https://picsum.photos/seed/picsum/200/300',pseudo:'Momo',score:100}]
 
 }
 
