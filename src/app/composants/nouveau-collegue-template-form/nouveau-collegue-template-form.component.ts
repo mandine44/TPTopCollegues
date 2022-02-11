@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Collegue } from 'src/app/models';
+import { DataService } from 'src/app/services/data.service';
 import { ListeColleguesComponentComponent } from '../liste-collegues-component/liste-collegues-component.component';
 @Component({
   selector: 'app-nouveau-collegue-template-form',
@@ -15,19 +16,23 @@ export class NouveauCollegueTemplateFormComponent implements OnInit {
     photo:"",
     score: 152
   };
-  constructor() { }
+  dataService: DataService
+  constructor(dataService:DataService) {
+    this.dataService=dataService;
+   }
 
   ngOnInit(): void {
 
   }
  valider(){
-console.log(this.collegue);
-this.collegue={
-  nom:" ",
-prenom:" ",
-pseudo:" ",
-photo:"",
-score: 152};
+
+this.dataService.creerCollegue(this.collegue);
+//this.collegue={
+//nom:" ",
+//prenom:" ",
+//pseudo:" ",
+//photo:"",
+//score: 152};
 
 
  }
