@@ -1,0 +1,37 @@
+{{collegue | json }}
+
+<form appNomPrenomValidator #etatForm="ngForm">
+  Pseudo<input #etatPseudo="ngModel" type="text" name="pseudo" [(ngModel)]="collegue.pseudo" required minlength="1" >
+  <br>
+  <p *ngIf="etatPseudo.invalid">
+    Pseudo obligatoire
+  </p>
+  <br>
+  Nom<input #etatNom="ngModel" type="text" name="nom" [(ngModel)]="collegue.nom" required minlength="2">
+  <br>
+  <p *ngIf="etatNom.pristine">
+    Nom obligatoire
+  </p>
+  <p *ngIf="etatNom.invalid">
+    Le nom doit avoir au moins 2 caracteres
+  </p>
+  <br>
+  Prenom<input #etatPrenom="ngModel" type="text" name="prenom" [(ngModel)]="collegue.prenom" required minlength="2">
+  <br>  <p *ngIf="etatPrenom.pristine">
+    Prenom obligatoire
+  </p>
+  <p *ngIf="etatPrenom.invalid">
+
+    Le prenom doit avoir au moins 2 caracteres
+  </p>
+  <br>
+  Photo<input #etatPhoto="ngModel" type="text" name="photo" [(ngModel)]="collegue.photo" required minlength="1" >
+  <p *ngIf="etatPhoto.invalid">
+    Photo obligatoire
+  </p>
+  <br>
+  <br>
+  <p *ngIf="etatForm.valid">
+  <button  (click)="valider()">Valider</button>
+  </p>
+</form>

@@ -15,7 +15,8 @@ listerCollegues(): Observable<Collegue[]> {
   }
 
 donnerUnAvis(collegue: Collegue, avis: Avis): Observable<Collegue> {
-  return this.http.post<Collegue>('https://formation-angular-collegues.herokuapp.com/api/v1/votes',{"pseudo":collegue,"avis":avis});
+  return this.http.post<Collegue>('https://formation-angular-collegues.herokuapp.com/api/v1/votes',
+  {"pseudo":collegue,"avis":avis});
    }
 }
 

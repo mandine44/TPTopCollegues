@@ -7,7 +7,10 @@ import { CollegueComponent } from './composants/collegue/collegue.component';
 import { ListeColleguesComponentComponent } from './composants/liste-collegues-component/liste-collegues-component.component';
 import { AccueilComponent } from './composants/accueil/accueil.component';
 import { ScorePipe } from './pipes/score.pipe';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { NouveauCollegueTemplateFormComponent } from './composants/nouveau-collegue-template-form/nouveau-collegue-template-form.component';
+import { NomPrenomValidatorDirective } from './validators/nom-prenom-validator.directive';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import {HttpClientModule} from '@angular/common/http'
     CollegueComponent,
     ListeColleguesComponentComponent,
     AccueilComponent,
-    ScorePipe
+    ScorePipe,
+    NouveauCollegueTemplateFormComponent,
+    NomPrenomValidatorDirective,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
